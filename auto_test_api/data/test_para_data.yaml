@@ -1,0 +1,12 @@
+contact: 玩啊啊啊
+email: 98416516@qq.com
+merchantIdBrokerConfig: 1028446
+mobile: '13751421021'
+registrationRegion: 北京市
+registrationRegionCode: '110000'
+relationMerchantIds:
+- '1028446'
+roleKey: offline_ordering_staff
+waitOpenCompanyList:
+- companyId: 20029
+- companyId: 1103

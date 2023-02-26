@@ -1,0 +1,63 @@
+addBroker:
+  "method": "post"
+  "url": "https://www.xxxx.com/api/member/fmp/member/create"
+  "headers":
+    "User-Agent": "Mozilla/5.0"
+  "cookies":
+    "fmpUid": $fmpUid
+  "json":
+    "contact": $contact
+    "email": $email
+    "mobile": $newmobile
+    "roleKey": "offline_ordering_staff"
+    "relationMerchantIds":
+      - $merchantId
+    "registrationRegionCode": "110000"
+    "registrationRegion": $registrationRegion
+    "merchantIdBrokerConfig": $merchantId
+    "waitOpenCompanyList":
+      - "companyId": 20029
+      - "companyId": 1103
+
+getMainMerchantList:
+  "method": "get"
+  "url": "https://www.xxxx.com/api/member/fmp/member/getMainMerchantList"
+  "headers":
+    "User-Agent": "Mozilla/5.0"
+  "cookies":
+    "fmpUid": $fmpUid
+
+getRegionList:
+  "method": "get"
+  "url": "https://www.xxxx.com/api/member/fmp/member/getRegionList"
+  "headers":
+    "User-Agent": "Mozilla/5.0"
+  "cookies":
+    "fmpUid": $fmpUid
+
+brokerBasicEdit:
+  "method": "post"
+  "url": "https://www.xxxx.com/api/member/fmp/member/getRegionList"
+  "headers":
+    "User-Agent": "Mozilla/5.0"
+  "cookies":
+    "fmpUid": $fmpUid
+  "json":
+    "brokerName": $brokerName
+    "cardNumber": "430103199207120030"
+    "mobile": $mobile
+    "provinceCode": "430000"
+    "province": "����ʡ"
+    "cityCode": "430100"
+    "city": "��ɳ��"
+    "address": "�Զ�����������1234��"
+    "nation": "674"
+    "education": "778"
+    "polity": "2501"
+    "certFrontFileId": "104652231"
+    "certFrontUrl": "https://fs.xxx.com/download/userfile2/M00/01/40/rBUBrmLH_wSALTt4AADbOu4cL80038.png"
+    "certBackFileId": "104652234"
+    "certBackUrl": "https://fs.xxx.com/download/userfile2/M00/01/40/rBUBr2LH_wmAAgBeAAIQoh-8_Q864.jpeg"
+    "personalCertFileId": "104652235"
+    "personalCertUrl": "https://fs.xxx.com/download/userfile2/M00/01/40/rBUBrmLH_w6AEsGnAADuh5R73PA772.jpg?"
+    "organization": "1271"

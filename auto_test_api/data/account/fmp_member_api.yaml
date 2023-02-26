@@ -1,0 +1,325 @@
+memberLogin:
+  "method": "post"
+  "url": "https://www.xxxx.com/api/member/fmp/member/login"
+  "headers":
+    "User-Agent": "Mozilla/5.0"
+  "json":
+    "avoidLanding": "true"
+    "mobile": $mobile
+    "password": $password
+    "tenantId": "0"
+
+
+partnerLogin:
+  "method": "get"
+  "url": https://www.xxxx.com/api/member/fmp/login/merchant/login?merchantId=$partner_id
+  "headers":
+    "User-Agent": "Mozilla/5.0"
+  "cookies":
+    "fmpUid": $member_fmpUid
+
+memberLogout:
+  "method": "get"
+  "url": https://www.xxxx.com/api/member/fmp/member/logout
+  "headers":
+    "User-Agent": "Mozilla/5.0"
+  "cookies":
+    "fmpUid": $fmpUid
+
+accountInfo:
+  "method": "get"
+  "url": "https://www.xxxx.com/api/member/fmp/login/info"
+  "headers":
+    "User-Agent": "Mozilla/5.0"
+  "cookies":
+    "fmpUid": $fmpUid
+
+memberRegister:
+  "method": "post"
+  "url": "https://www.xxxx.com/api/member/fmp/newCustomer"
+  "headers":
+    "User-Agent": "Mozilla/5.0"
+  "cookies":
+    "fmpSmsToken": $fmpSmsToken
+  "json":
+    "customerType": 1
+    "firstIndustryId": 1003
+    "firstIndustryName": "金融"
+    "city": "石家庄市"
+    "cityCode": "130100"
+    "province": "河北省"
+    "provinceCode": "130000"
+    "custName": $custName
+    "flowRemark": "自动化测试申请理由"
+    "contact": $contact
+    "mobile": $mobile
+    "code": $sms_code
+
+createAccount:
+  "method": "post"
+  "url": "https://in.xxxx.com/qixin/fmp/create/accountId"
+  "headers":
+    "User-Agent": "Mozilla/5.0"
+  "cookies":
+    "token": $token
+  "json":
+    "memberName": $memberName
+    "mobile": $mobile
+    "customerType": 1
+    "hasRecord": 1
+    "hasLicense": 1
+    "hasRelyCompany": 0
+    "relyCompanyId": null
+    "customerId": $customerId
+    "copCode": null
+    "subjectName": $subjectName
+    "trafficType": 0
+    "trafficName": $trafficName
+    "cooperateType": 1
+    "followType": 1
+    "followName": "测试跟进名义"
+    "feeTemplateId": $feeTemplateId
+    "businessType": 1
+    "solutionType": $solutionType
+
+createBusinessLine:
+  "method": "post"
+  "url": "https://in.xxxx.com/qixin/fmp/createBusinessLineShare"
+  "headers":
+    "User-Agent": "Mozilla/5.0"
+  "cookies":
+    "token": $token
+  "json":
+    "businessLineName":
+    "trafficName": $trafficName  #业务线名称、平台名称
+    "firstIndustryName": "金融"
+    "firstIndustryId": 1003
+    "secondIndustryName": "金融一号"
+    "secondIndustryId": 16
+    "cooperateType": "1"
+    "solutionType": $solutionType # 0-新媒体解决方案, 1-机构解决方案
+    "trafficType": 1
+    "followType": 1
+    "followName": "测试跟进名义"  #跟进名义
+    "feeTemplateId": $feeTemplateId
+    "businessType": 1
+    "customerId": $customerId
+    "subjectId": $subjectId
+
+activeMember:
+  "method": "post"
+  "url": "https://www.xxxx.com/api/member/fmp/activate/customer"
+  "headers":
+    "User-Agent": "Mozilla/5.0"
+  "cookies":
+    "fmpSmsToken": $fmpSmsToken
+  "json":
+    "activatable": true
+    "code": $sms_code
+    "mobile": $mobile
+    "password": $password
+
+subjectTempSave:
+  "method": "post"
+  "url": "https://www.xxxx.com/api/member/fmp/subject/temp/save"
+  "headers":
+    "User-Agent": "Mozilla/5.0"
+  "cookies":
+    "fmpUid": $fmpUid
+  "json":
+    "loading": false
+    "subjectInfo": true
+    "subjectFinanceInfo": false
+    "certFrontFileId":
+    "certFrontUrl":
+    "certBackFileId":
+    "certBackUrl":
+    "personalCertFileId":
+    "personalCertUrl":
+    "cooperationAgreementFileId":
+    "cooperationAgreementUrl":
+    "businessLicenseFileId": "103822864"
+    "businessLicenseUrl": "https://files.xxxxx.com/file2/M00/07/72/rBUBrmHJGkiAA6gtAABy-rkllBI093.jpg"
+    "authModalVisible": false
+    "id": $subjectId
+    "city": "杭州市"
+    "cityCode": "330100"
+    "province": "浙江省"
+    "provinceCode": "330000"
+    "responsible":
+    "cardNumber":
+    "address": "自动测试大街23号2楼203"
+    "nation":
+    "education":
+    "polity":
+    "financialType": 1
+    "bankAccountName": $bankAccountName
+    "alipayAccountName":
+    "alipayAccount":
+    "bankName": "中国工商银行"
+    "bankProvince": "浙江省"
+    "bankCity": "杭州市"
+    "bankAccount": "6230625905557730704"
+    "authState": 0
+    "isHuizeAgent": false
+    "subjectType": 1
+    "companyName": $companyName
+    "email": $email
+    "telephone": $telephone
+    "invoiceNeeded": true
+    "invoiceType": 1
+    "invoiceRate": 6
+    "invoiceUrl": "https://files.xxxx.com/file2/M00/07/72/rBUBrmHJGnWAJBnCAACqV2MDwBI954.jpg"
+    "invoiceFileId": "103822867"
+    "failMsg":
+    "isPrevStep": false
+    "spinning": false
+    "processNode": 0
+    "isPassOcr": false
+    "organization": 1271
+
+submitSubjectAuth:
+  "method": "post"
+  "url": "https://www.xxxx.com/api/member/fmp/subject/create"
+  "headers":
+    "User-Agent": "Mozilla/5.0"
+  "cookies":
+    "fmpUid": $fmpUid
+  "json":
+    "loading": false
+    "subjectInfo": true
+    "subjectFinanceInfo": true
+    "certFrontFileId":
+    "certFrontUrl":
+    "certBackFileId":
+    "certBackUrl":
+    "personalCertFileId":
+    "personalCertUrl":
+    "cooperationAgreementFileId":
+    "cooperationAgreementUrl":
+    "businessLicenseFileId": "103822864"
+    "businessLicenseUrl": "https://files.huizecdn.com/file2/M00/07/72/rBUBrmHJGkiAA6gtAABy-rkllBI093.jpg"
+    "authModalVisible": false
+    "city": "杭州市"
+    "cityCode": "330100"
+    "province": "浙江省"
+    "provinceCode": "330000"
+    "responsible":
+    "cardNumber":
+    "address": "西湖一街23号2楼203"
+    "nation":
+    "education":
+    "polity":
+    "financialType": 1
+    "bankAccountName": $bankAccountName
+    "alipayAccountName":
+    "alipayAccount":
+    "bankName": "中国工商银行"
+    "bankProvince": "浙江省"
+    "bankCity": "杭州市"
+    "bankAccount": "6230625905557730704"
+    "authState": 0
+    "isHuizeAgent": false
+    "subjectType": 1
+    "companyName": $companyName
+    "email": $email
+    "telephone": $telephone
+    "invoiceNeeded": true
+    "invoiceType": 1
+    "invoiceRate": 6
+    "invoiceUrl": "https://files.xxxx.com/file2/M00/07/72/rBUBrmHJGnWAJBnCAACqV2MDwBI954.jpg"
+    "invoiceFileId": "103822867"
+    "failMsg":
+    "isPrevStep": false
+    "spinning": false
+    "processNode": 0
+    "isPassOcr": false
+    "ocrCode": 0
+    "ocrMsg":
+    "subjectId": $subjectId
+    "customerId": $customerId
+    "memberId": $memberId
+    "customerName": $customerName
+    "organization": 1271
+
+subjectAudit:
+  "method": "post"
+  "url": "https://in.xxxx.com/qixin/fmp/verifySubject"
+  "headers":
+    "User-Agent": "Mozilla/5.0"
+  "cookies":
+    "token": $token
+  "json":
+    "subjectHistoryId": $subjectHistoryId
+    "remark": "自动测试主体认证通过"
+    "authState": $authState
+
+addMember:
+  "method": "post"
+  "url": "https://www.xxxx.com/api/member/fmp/member/create"
+  "headers":
+    "User-Agent": "Mozilla/5.0"
+  "cookies":
+    "fmpUid": $fmpUid
+  "json":
+    "contact": $contact
+    "email": $email
+    "mobile": $newmobile
+    "roleKey": counselor
+    "subjectAndLineDTO":
+    - "lineList":
+      - "lineId": $lineId
+      "subjectId": $subjectId
+
+editMember:
+  "method": "post"
+  "url": "https://www.xxxx.com/api/member/fmp/member/change"
+  "headers":
+    "User-Agent": "Mozilla/5.0"
+  "cookies":
+    "fmpUid": $fmpUid
+  "json":
+    "contact": $contact
+    "email": $email
+    "mobile": $newmobile
+    "roleKey": counselor
+    "subjectAndLineDTO":
+    - "lineList":
+      - "lineId": $lineId
+      "subjectId": $subjectId
+    "id": $memberId
+
+queryMemberList:
+  "method": "post"
+  "url": "https://www.xxxx.com/api/member/fmp/member/list"
+  "headers":
+    "User-Agent": "Mozilla/5.0"
+  "cookies":
+    "fmpUid": $fmpUid
+  "json":
+    "pageIndex": $pageIndex
+    "pageSize": $pageSize
+
+queryMemberPermissionData:
+  "method": "get"
+  "url": "https://www.xxxx.com/api/merchant/fmp/permission/member/data"
+  "headers":
+    "User-Agent": "Mozilla/5.0"
+  "cookies":
+    "fmpUid": $fmpUid
+
+queryMemberPermissionAll:
+  "method": "get"
+  "url": "https://www.xxxx.com/api/member/fmp/permission/member/all"
+  "headers":
+    "User-Agent": "Mozilla/5.0"
+  "cookies":
+    "fmpUid": $fmpUid
+
+queryPartnerPermission:
+  "method": "get"
+  "url": https://www.xxxx.com/api/merchant/info/permission?partnerId=$partner_id
+  "headers":
+    "User-Agent": "Mozilla/5.0"
+  "cookies":
+    "fmpUid": $fmpUid

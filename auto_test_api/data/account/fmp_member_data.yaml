@@ -1,0 +1,35 @@
+login:
+  ids:
+  data:
+    - [ "mobile","password","admin" ]
+
+accountInfo:
+  ids:
+  data:
+    - [ "mobile","password" ]
+
+createAccount:
+  ids:
+  data:
+    - [ "297","0" ]
+
+createBusinessLine:
+  ids:
+  data:
+    - [ "297","0" ]
+
+memberInfo:
+  - { "mobile": "mobile", "password": "password" }
+  - { "mobile": "mobile", "password": "password" }
+
+queryMemberList:
+  ids:
+  data:
+    - [ "mobile","password",1,10 ]
+
+partnerInfo:
+  ids:
+  data:
+    - [ "mobile","password","1000943" ]
+
+

@@ -1,0 +1,23 @@
+fmpSms:
+  "method": "post"
+  "url": "https://www.xxxx.com/api/member/fmp/sms/code"
+  "headers":
+    "User-Agent": "Mozilla/5.0"
+  "json":
+    "mobile": $mobile
+    "smsCodeType": $sms_code_type
+    "verifyCode": "test"
+
+huntianLogin:
+  "method": post
+  "url": https://xxxx.xxxx.com/login
+  "headers":
+    "Content-Type": application/x-www-form-urlencoded;charset=utf-8
+    "User-Agent": Mozilla/5.0
+  "data":
+    "jcaptcha": 1
+    "password": $password
+    "redirectUrl":
+    "username": $username
+
+
